@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Real-Time with Node.JS no feik 100% github</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<div id="msj"></div>
+
+<form onsubmit="return false;" id="formLoad">
+	<input type="text" id="mensaje" autocomplete="off">
+	<input type="submit">
+</form>
+
+<div id="activos"></div>
+
+<script type="text/javascript">
+	var socket = io.connect('http://127.0.0.1:8080')
+	var user = '';
+
+	$(function(){
+
+		baba = true;
+		while(baba){
+			var x = '';
+			x = prompt("Nombre de usuario",'');
+			
+			if(x != null && x != '' && x != undefined){
+				x = x.trim();
+				if(x == '') alert('Necesitas ser un usuario para participar');
+				else{
+					socket.emit('newuser', x)
+					user = x
+					baba = false;
+					$('#msj').append("<label>¡Bienvenido a la sala <b>" + x + "</b>! Escribe cualquier mensaje</label><br>")
+				}
+			}
+			else alert('Necesitas ser un usuario para participar');
+		}
+
+		socket.on('recieve', function(data){
+			$('#msj').append(
+					"<b>" + data.usuario + "</b> <label>" + data.mensaje + "</label><br>"
+				)
+		})
+		$('#formLoad').submit(function(){
+			$Mensaje = $('#mensaje').val()
+			if($Mensaje != ''){
+				socket.emit('envio', {
+					mensaje: $Mensaje,
+					usuario: user
+				})
+				$('#mensaje').val('')
+			}
+		})
+	})
+
+</script>
+
+</body>
+</html>
