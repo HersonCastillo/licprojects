@@ -1,2 +1,1 @@
-Hola Mundo!
-Primer "proyecto" con repositorios!!
+Para que este programa funcione debe de descargar la aplicación de nodejs por que si no la tiene no funcionara
