@@ -8,17 +8,18 @@
 </head>
 <body>
 
+	<!--Donde saldrán las imagenes-->
 <div id="msj"></div>
 
 <form onsubmit="return false;" id="formLoad">
 	<input type="text" id="mensaje" autocomplete="off">
 	<input type="submit">
 </form>
-
-<div id="activos"></div>
+	<!--Formulario de donde se enviará el mensaje-->
 
 <script type="text/javascript">
 	var socket = io.connect('http://127.0.0.1:8080')
+	//Realiza una conexión al socket global de server.js
 	var user = '';
 
 	$(function(){
@@ -32,6 +33,7 @@
 				x = x.trim();
 				if(x == '') alert('Necesitas ser un usuario para participar');
 				else{
+					//Envia al usuario creado
 					socket.emit('newuser', x)
 					user = x
 					baba = false;
@@ -39,13 +41,13 @@
 				}
 			}
 			else alert('Necesitas ser un usuario para participar');
-		}
+		} //Inicializa un nuevo usuario dentro del chat
 
 		socket.on('recieve', function(data){
 			$('#msj').append(
 					"<b>" + data.usuario + "</b> <label>" + data.mensaje + "</label><br>"
 				)
-		})
+		})//Evento a la hora de recibir respuesta del servidor node
 		$('#formLoad').submit(function(){
 			$Mensaje = $('#mensaje').val()
 			if($Mensaje != ''){
@@ -53,6 +55,7 @@
 					mensaje: $Mensaje,
 					usuario: user
 				})
+				//Envia un JSON de los datos obtenidos en el formulario
 				$('#mensaje').val('')
 			}
 		})
