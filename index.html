@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>e-Wallet</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<script type="text/javascript" src="js/fquery.js"></script>
+	<link rel="stylesheet" href="fonts/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-icons.min.css">
+</head>
+<body>
+	<div class="cabe">
+		<div id="logo"><span id="e"><img src="img/e.png" alt=""><span id="wallet"> Wallet</span></span></div>
+	</div>
+
+	<div class="contenido">
+			<ul class="backgroundslider">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+	</div>
+	<div class="conta">
+		<nav>
+			<span class="mif-chevron-left mif-3x b"></span>
+			<ul id="menu_principal">
+					<img src="img/img.png" alt="" id="img">
+				<li><a href="#"><span class="mif-home mif-3x principales"></span>E-Wallet</a></li>
+
+				<li>
+					<label for="drop-1">
+						<span class="mif-registered mif-3x principales"></span>
+						Cuentas
+						<span class="mif-chevron-right mif-2x derecha"></span>
+					</label>
+					<input type="checkbox" id="drop-1">
+
+					<ul>
+						<li><a href="">Efectivo</a></li>
+						<li><a href="">Cuentas</a></li>
+						<li><a href="">Tarjetas</a></li>
+					</ul>
+				</li>
+
+
+				<li>
+					<label for="drop-2">
+						<span class="mif-dollar2 mif-3x principales"></span>
+						Ingresos
+						<span class="mif-chevron-right mif-2x derecha"></span>y
+					</label>
+					<input type="checkbox" id="drop-2">
+
+					<ul>
+						<li><a href="">Ver ingresos</a></li>
+						<li><a href="">Agregar nuevo ingreso</a></li>
+					</ul>
+					
+				</li>
+
+
+				<li><a href=""><span class="mif-dollars mif-3x principales"></span>Gastos</a></li>
+				<li><a href=""><span class="mif-cog mif-3x principales"></span>Configuraciones</a></li>
+				<li><a href=""><span class="mif-coins mif-3x principales"></span>Estadisticas</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="bgventana">
+		<div  id="ventana">
+		<a href="javascript:mostrar('hidden')">×</a><br>
+		<div id="logo"><span id="e"><img src="img/e.png" alt=""><div id="wallet"><span> Wallet</span></div></span></div><br><br>
+		
+			<form action="">
+				<div class="primera">
+			<label for="">Ingrese su nombre</label><br>
+			<input type="text" name="username" placeholder="Nombres" autocomplete="off">
+			</div>
+			<div class="segundo">
+			<label for="">Ingrese su apellido</label><br>
+			<input type="text" name="userap" placeholder="Apellidos" autocomplete="off">
+			</div>
+			<div class="primera">
+			<label for="">Ingrese su contraseña</label><br>
+			<input type="password" name="pass" placeholder="Contraseña" autocomplete="off"></div>
+			<div class="segundo">
+			<label for="">Ingrese su correo electronico	</label><br>
+			<input type="email" name="userem" placeholder="@Email" autocomplete="off">
+			</div>
+			<div class="primera">
+			<label for="">Ingrese su dirección actual</label><br>
+			<input type="text" name="userdir" placeholder="Direción" autocomplete="off">
+			</div>
+			<div class="segundo">
+			<label for="">Ingrese su DUI</label><br>
+			<input type="text" name="userdui" placeholder="DUI: ########-#" autocomplete="off">
+			</div>
+			<div class="primera">
+			<label for="">Ingrese su NIT</label><br>
+			<input type="number" name="NIT" placeholder="Telefono: ####-####" autocomplete="off">
+			</div>
+			<div class="segundo">
+			<label for="">Ingrese su Telefono/Celular</label><br>
+			<input type="tel" name="usertel" placeholder="NIT" autocomplete="off">
+			</div>
+			<div class="primera">
+			<label for="">Ingrese su fecha de nacimiento</label><br>
+			<input type="date" name="userdate" autocomplete="off">
+			</div>
+			<div class="pregunta">
+			<label for="">Si no recuernas tu contraseña responde a esta pregunta: </label><br><label for="">¿Cual es el nombre de su mascota?&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" name="userpreg" placeholder="Escriba su Respuesta" autocomplete="off">
+			</div>
+			<button id="boton">Registarse</button>
+			</form>
+		</div>
+	</div>
+	<div class="container">
+		<form>
+			<img src="img/wallet-512.png" alt="" >
+			<div class="form-input">
+			<input type="email" name="username" placeholder="Nombre de usuario" autocomplete="off">
+			</div>
+			<div class="form-input">
+			<input type="password" name="password" placeholder="Contraseña">
+			</div>
+			<input type="button" name="button" value="INGRESAR" class="button"><br>
+			<a href="javascript:mostrarc('visible')">¿Olvidaste tu contraseña? Click aquí</a><br><br>
+			<a href="javascript:mostrar('visible')">¿No tienes una cuenta? Registrate Click aquí</a>
+		</form>
+	</div>
+	<div id="bgventanac">
+		<div  id="ventanac">
+		<a href="javascript:mostrarc('hidden')">×</a><br>
+		<div id="logo"><span id="e"><img src="img/e.png" alt=""><div id="wallet"><span> Wallet</span></div></span></div><br><br>	
+		<form action="">
+			<label for="">Ingrese su correco electronico</label><br>
+			<input type="email" name="username" placeholder="Email" autocomplete="off"><br>
+			<label for="">Ingrese la ultima contraseña que recuerde</label><br>
+			<input type="password" name="pass" placeholder="Contraseña" autocomplete="off"><br>
+			<label for="">Ingrese la respuesta a la pregunta seleccionada:&nbsp;&nbsp;&nbsp;</label><br>
+			<input type="text" name="userap" placeholder="Apellidos" autocomplete="off"><br>
+			<button id="bot">Recuperar</button>
+		</form>
+		</div>
+	</div>
+		<div  id="ventanaregistro">
+		<form>
+			<img src="img/wallet-512.png" alt="" >
+			<div class="form-input">
+			<input type="email" name="usernames" placeholder="Nombre de usuario" autocomplete="off">
+			</div>
+			<div class="form-input">
+			<input type="password" name="passwords" placeholder="Contraseña">
+			</div>
+			<div class="form-input">
+			<input type="number" name="efectivo" placeholder="Efectivo">
+			</div>
+			<label for="" id="l">Ingresar cuentas bancaria</label>
+			<div id="cuenta">
+			<input type="text" name="efectivo" placeholder="Efectivo">
+			<input type="text" name="efectivo" placeholder="Efectivo">
+			<input type="text" name="efectivo" placeholder="Efectivo"><br>
+			<input type="button" name="button" value="AGREGAR" class="button" id="agre"><br><br>
+			</div>
+			<div id="mcuenta">
+				
+			</div>
+			<input type="button" name="button" value="INGRESAR" class="button" id="ing"><br><br>
+		</form>
+		</div>
+	<script type="text/javascript" src="js/modal.js"></script>
+</body>
+</html>
