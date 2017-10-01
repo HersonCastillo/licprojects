@@ -11,9 +11,11 @@ $("#boton").on("click", function(){
 	return false;
 })
 var i = 500;//alto de la pagina
+var a = 0:
 $("#agre").on("click", function(){
 	i = i + 50;
-	document.getElementById('mcuenta').innerHTML += "<input type='text' name'efectivo' placeholder='Efectivo'> <input type='text' name='efectivo' placeholder='Efectivo'> <input type='text' name='efectivo' placeholder='Efectivo'><br>";
+	a++;
+	document.getElementById('mcuenta').innerHTML += "<input type='text' name'Banco"+a+"' placeholder='Banco'> <input type='text' name='Cuenta"+a+"' placeholder='# de Cuenta'> <input type='text' name='sald ""' placeholder='Saldo Actual'><br>";
 	document.getElementById('ventanaregistro').style.height = String(i+"px");
 });
 $("#ing").on("click", function(){
