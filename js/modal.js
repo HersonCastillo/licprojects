@@ -10,7 +10,7 @@ $("#boton").on("click", function(){
 	$("#bgventana").css({visibility: "hidden"});
 	return false;
 })
-var i = 500;
+var i = 500;//alto de la pagina
 $("#agre").on("click", function(){
 	i = i + 50;
 	document.getElementById('mcuenta').innerHTML += "<input type='text' name'efectivo' placeholder='Efectivo'> <input type='text' name='efectivo' placeholder='Efectivo'> <input type='text' name='efectivo' placeholder='Efectivo'><br>";
