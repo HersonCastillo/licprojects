@@ -4,6 +4,9 @@ function mostrar(valor){
 function mostrarc(valor){
 	$("#bgventanac").css({visibility: valor});
 }
+$("#ef").on("click", function(){ 
+	$(".efec").css({display: "block"})
+ });
 var i = 500;//alto de la pagina
 var a = 0;
 $("#agre").on("click", function(){
