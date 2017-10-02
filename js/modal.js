@@ -1,26 +1,28 @@
+//pantalla modal para el registro
 function mostrar(valor){
 	$("#bgventana").css({visibility: valor})
 }
+//pantalla modal para la recuperacion de contraseña
 function mostrarc(valor){
 	$("#bgventanac").css({visibility: valor});
 }
-$("#boton").on("click", function(){
-	$("#ventanaregistro").css({visibility: "visible"});
-	$(".container").css({visibility: "hidden"});
-	$("#bgventana").css({visibility: "hidden"});
-	return false;
-})
-var i = 500;
+//pantalla modal para mostrar el efectivo
+$("#ef").on("click", function(){ 
+	$(".efec").css({display: "block"})
+ });
+//muestra la cuenta
+$("#cu").on("click", function(){ 
+	$(".efec").css({display: "block"})
+ });
+
+var i = 500;//alto de la pagina
+var a = 0;
 $("#agre").on("click", function(){
-	i = i + 50;
-	document.getElementById('mcuenta').innerHTML += "<input type='text' name'efectivo' placeholder='Efectivo'> <input type='text' name='efectivo' placeholder='Efectivo'> <input type='text' name='efectivo' placeholder='Efectivo'><br>";
-	document.getElementById('ventanaregistro').style.height = String(i+"px");
+	i = i + 50;//se incrementa la mantalla por cada vez que agrega una nueva cuenta
+	a++;//se le agrega uno al id como identificador
+	$("#count").val(a)
+	$("#mcuenta").html($("#mcuenta").html() + "<input type='text' id='Banco"+a+"' placeholder='Banco'> <input type='text' id='Cuenta"+a+"' placeholder='# de Cuenta'> <input type='text' id='sald"+a+"' placeholder='Saldo Actual'><br>");
+	d.getElementById('ventanaregistro').style.height = String(i+"px");
 });
-$("#ing").on("click", function(){
-	$(".contenido").css({visibility: "hidden"});
-	$(".container").css({visibility: "hidden"});
-	$("#ventanaregistro").css({display: "none"});
-	$(".conta").css({visibility: "visible"});
-	$(".cabe").css({display: "block"});
-	return false;
+ false;
 })
