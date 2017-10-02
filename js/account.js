@@ -38,6 +38,27 @@ $().ready(function(){
 		$(".conta").css({visibility: "hidden"});
 		$(".cabe").css({display: "none"});
 	}
+	var DeleteAll = () => {
+		$("#nameuser").val("");
+		$("#userap").val("");
+		$("#pass").val("");
+		$("#userdir").val("");
+		$("#userem").val("");
+		$("#userdui").val("");
+		$("#usertel").val("");
+		$("#NIT").val("");
+		$("#userdate").val("");
+		$("#userpreg").val("");
+		$("#username").val("");
+		$("#efectivo").val("");
+
+		$("#Banco").val("");
+		$("#Cuenta").val("");
+		$("#sald").val("");
+		$("#count").val(0);
+		$("#mcuenta").html("")
+		a = 0;
+	}
 	$("#close").on('click', function(){
 		x = confirm("¿Está seguro que desea cerrar sesión?");
 		if(x) Re();
@@ -73,7 +94,7 @@ $().ready(function(){
 			if ($Reg3.test($NIT) == false) alert("Ha ingresado el NIT de forma incorrecta ejemplo: 1205-200982-101-0");	
 			if ($Reg4.test(String($fNacimiento)) == false) alert("Ha ingresado su fecha de nacimiento de forma incorrecta ejemplo: 09/09/1999");
 			if ($Reg5.test(String($Email)) == false) alert("Ha ingresado el email de forma incorrecta ejemplo: wecp123@gmail.com");
-			if ($Reg1.test($Celular) == true && $Reg2.test($DUI) == true && $Reg3.test($NIT) == true && $Reg4.test($fNacimiento) == true && $Reg5.test(String($Email) == true)) {
+			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email)) {
 				Oc();
 				InfoAux.push({
 					Nombre: $Nombre,
@@ -88,7 +109,6 @@ $().ready(function(){
 					Respuesta: $Respuesta
 				});
 			}
-				
 		}else alert("Datos ingresados, no están completados o vacíos.");
 
 	})
@@ -99,6 +119,12 @@ $().ready(function(){
 		$BancoDefecto = $("#Banco").val();
 		$CuentaDefecto = $("#Cuenta").val();
 		$SaldoDefecto = $("#sald").val();
+
+		$BancoAux = [];
+		$CuentaAux = $BancoAux;
+		$SaldoAux = $CuentaAux;
+
+		$Count = $("#count").val();
 
 		if(	Vald($Username) &&
 			NumVal($Efectivo) &&
