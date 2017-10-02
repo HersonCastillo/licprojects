@@ -11,7 +11,7 @@ $("#boton").on("click", function(){
 	return false;
 })
 var i = 500;//alto de la pagina
-var a = 0:
+var a = 0;
 $("#agre").on("click", function(){
 	i = i + 50;
 	a++;
