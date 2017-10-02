@@ -61,7 +61,6 @@ $().ready(function(){
 	$("#close").on('click', function(){
 		x = confirm("¿Está seguro que desea cerrar sesión?");
 		if(x){
-			console.log(Selected)
 			Re();
 			DeleteAll();
 		}
