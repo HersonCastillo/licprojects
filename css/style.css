@@ -103,6 +103,7 @@
     padding: 0.2px;
     padding-left: 40px;
     outline: none;
+    border-style: none;
 }
 .form-input::before{
     content: "\e900";
@@ -214,6 +215,7 @@ a{
     padding: 0.2px;
     padding-left: 10px;
     outline: none;
+    border-style: none;
 }
 #ventana .primero{
     margin-top: -4%;
@@ -301,6 +303,7 @@ a{
     padding: 0.2px;
     padding-left: 10px;
     outline: none;
+    border-style: none;
 }
 #ventanac #wallet{
     font-family: "Bold";
@@ -344,6 +347,7 @@ a{
     padding: 0.2px;
     padding-left: 40px;
     outline: none;
+    border-style: none;
 }
 #ventanaregistro #cuenta input[type="text"]{
     width: 100px;
@@ -356,6 +360,7 @@ a{
     outline: none;
     margin-top: 5px;
     margin-left: 5px;
+    border-style: none;
 }
 #ventanaregistro #mcuenta input[type="text"]{
     width: 100px;
