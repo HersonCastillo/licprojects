@@ -4,12 +4,6 @@ function mostrar(valor){
 function mostrarc(valor){
 	$("#bgventanac").css({visibility: valor});
 }
-$("#boton").on("click", function(){
-	$("#ventanaregistro").css({visibility: "visible"});
-	$(".container").css({visibility: "hidden"});
-	$("#bgventana").css({visibility: "hidden"});
-	return false;
-})
 var i = 500;//alto de la pagina
 var a = 0;
 $("#agre").on("click", function(){
