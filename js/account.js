@@ -32,6 +32,21 @@ $().ready(function(){
 		$(".conta").css({visibility: "visible"});
 		$(".cabe").css({display: "block"});
 	}
+	var Re = () => {
+		$(".contenido").css({visibility: "visible"});
+		$(".container").css({visibility: "visible"});
+		$("#ventanaregistro").css({display: "inline-block"});
+		$(".conta").css({visibility: "hidden"});
+		$(".cabe").css({display: "none"});
+	}
+	$("#close").on('click', function(){
+		x = confirm("¿Está seguro que desea cerrar sesión?");
+		if(x) {
+			console.log(Usuario)
+			Re();
+		}
+		else return false;
+	})
 	$("#boton").on("click", function(){
 
 		$Nombre = $("#nameuser").val();
@@ -111,7 +126,6 @@ $().ready(function(){
 				Saldos: $SaldoAux
 			})
 			Mo();
-			console.log(Usuario)
 		}else alert('Hay datos que rellenar o algún dato no es válido.');
 
 	})
