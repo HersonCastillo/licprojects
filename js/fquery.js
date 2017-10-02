@@ -40,7 +40,7 @@ class fQuery{
 		h = h || undefined;
 		if(h == undefined){
 			if(this.a) return this.q[0].textContent;
-			else return this.q.textContent;
+			else return this.q.textContent.toString();
 		}else{
 			if(!this.a)this.q.innerHTML = h;
 			else for(var i = 0; i <= (this.q.length - 1); i++) this.q[i].innerHTML = h;
