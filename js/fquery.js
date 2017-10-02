@@ -40,7 +40,7 @@ class fQuery{
 		h = h || undefined;
 		if(h == undefined){
 			if(this.a) return this.q[0].textContent;
-			else return this.q.textContent.toString();
+			else return this.object().innerHTML;
 		}else{
 			if(!this.a)this.q.innerHTML = h;
 			else for(var i = 0; i <= (this.q.length - 1); i++) this.q[i].innerHTML = h;
@@ -118,7 +118,10 @@ class fQuery{
 				if(this.a){
 					var y = this.q;
 					for(var i = 0; i <= (y.length - 1); i++) y[i].style = transform;
-				}else this.q.style = transform;
+				}else {
+					//Here
+					this.q.style = transform;
+				}
 			}else console.error('Error: An error occurred in the $:css() function, a type argument is incorrect.');
 		}else console.error('Error: An error occurred in the $:css() function, an argument is missing.');
 	}

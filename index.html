@@ -1,4 +1,3 @@
-<!--Mod-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,49 +73,49 @@
 			<form class="frm">
 				<div class="primera">
 			<label>Ingrese su nombre</label><br>
-			<input type="text" name="username" placeholder="Nombres" autocomplete="off">
+			<input type="text" id="nameuser" placeholder="Nombres" autocomplete="off">
 			</div>
 			<div class="segundo">
 			<label>Ingrese su apellido</label><br>
-			<input type="text" name="userap" placeholder="Apellidos" autocomplete="off">
+			<input type="text" id="userap" placeholder="Apellidos" autocomplete="off">
 			</div>
 			<div class="primera">
 			<label>Ingrese su contraseña</label><br>
-			<input type="password" name="pass" placeholder="Contraseña" autocomplete="off"></div>
+			<input type="password" id="pass" placeholder="Contraseña" autocomplete="off"></div>
 			<div class="segundo">
 			<label>Ingrese su correo electronico	</label><br>
-			<input type="email" name="userem" placeholder="@Email" autocomplete="off">
+			<input type="email" id="userem" placeholder="@Email" autocomplete="off">
 			</div>
 			<div class="primera">
 			<label>Ingrese su dirección actual</label><br>
-			<input type="text" name="userdir" placeholder="Direción" autocomplete="off">
+			<input type="text" id="userdir" placeholder="Direción" autocomplete="off">
 			</div>
 			<div class="segundo">
 			<label>Ingrese su DUI</label><br>
-			<input type="text" name="userdui" placeholder="DUI: ########-#" autocomplete="off">
+			<input type="text" id="userdui" placeholder="DUI: ########-#" autocomplete="off">
 			</div>
 			<div class="primera">
 			<label>Ingrese su NIT</label><br>
-			<input type="number" name="NIT" placeholder="Telefono: ####-####" autocomplete="off">
+			<input type="number" id="NIT" placeholder="Telefono: ####-####" autocomplete="off">
 			</div>
 			<div class="segundo">
 			<label>Ingrese su Telefono/Celular</label><br>
-			<input type="tel" name="usertel" placeholder="NIT" autocomplete="off">
+			<input type="tel" id="usertel" placeholder="NIT" autocomplete="off">
 			</div>
 			<div class="primera">
 			<label>Ingrese su fecha de nacimiento</label><br>
-			<input type="date" name="userdate" autocomplete="off">
+			<input type="date" id="userdate" autocomplete="off">
 			</div>
 			<div class="pregunta">
 			<label>Si no recuernas tu contraseña responde a esta pregunta: </label><br><label>¿Cual es el nombre de su madre?&nbsp;&nbsp;&nbsp;&nbsp;</label>
-			<input type="text" name="userpreg" placeholder="Escriba su Respuesta" autocomplete="off">
+			<input type="text" id="userpreg" placeholder="Escriba su Respuesta" autocomplete="off">
 			</div>
 			<button id="boton">Registarse</button>
 			</form>
 		</div>
 	</div>
 	<div class="container">
-		<form>
+		<form class="frm">
 			<img src="img/wallet-512.png" alt="" >
 			<div class="form-input">
 			<input type="email" name="username" placeholder="Nombre de usuario" autocomplete="off">
@@ -146,7 +145,7 @@
 		</div>
 	</div>
 		<div  id="ventanaregistro">
-		<form>
+		<form class="frm">
 			<img src="img/wallet-512.png" alt="" >
 			<div class="form-input">
 			<input type="email" name="usernames" placeholder="Nombre de usuario" autocomplete="off">
@@ -165,6 +164,8 @@
 				
 			</div>
 			<input type="button" name="button" value="INGRESAR" class="button" id="ing"><br><br>
+
+			<input type="hidden" id="count" value="0">
 		</form>
 		</div>
 	<script type="text/javascript" src="js/modal.js"></script>
