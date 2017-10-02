@@ -1,7 +1,6 @@
 $().ready(function(){
-	var NombreUsuario = "",
-		Efectivo = 0e0,
-		Cuentas = [];
+	var UsuarioNumber = 0,
+		Usuario = [];
 	$(".frm").on("submit", function(){
 		return false;
 	})
