@@ -175,8 +175,8 @@ a{
     color: gray;
     font-size: 30px;
     text-decoration: none;
-    margin-left: 93%;
-    margin-top: -6%;  
+    top: 0px;
+    right: 10px;
 }
 
 #boton{
@@ -216,6 +216,7 @@ a{
     padding-left: 10px;
     outline: none;
     border-style: none;
+    border-bottom: 1px solid #ddd;
 }
 #ventana .primero{
     margin-top: -4%;
@@ -255,7 +256,6 @@ a{
     position: absolute;
     border-radius: 3px solid;
     width: 320px;
-    height: 380px;
     top: 20%;
     left: 37%;
     padding-left: 2%;
@@ -295,7 +295,7 @@ a{
     box-shadow: inset 0px 0px 4px rgba(0,0,0,.2);
 }
 #ventanac input[type="email"], #ventanac input[type="password"], #ventanac input[type="text"]{
-    width: 200px;
+    width: 85%;
     height: 35px;
     font-size: 18px;
     margin-bottom: 20px;
@@ -304,6 +304,7 @@ a{
     padding-left: 10px;
     outline: none;
     border-style: none;
+    border-bottom: 1px solid #ddd;
 }
 #ventanac #wallet{
     font-family: "Bold";
