@@ -40,10 +40,7 @@ $().ready(function(){
 	}
 	$("#close").on('click', function(){
 		x = confirm("¿Está seguro que desea cerrar sesión?");
-		if(x) {
-			console.log(Usuario)
-			Re();
-		}
+		if(x) Re();
 		else return false;
 	})
 	$("#boton").on("click", function(){
@@ -122,5 +119,8 @@ $().ready(function(){
 
 		}else alert('Hay datos que rellenar o algún dato no es válido.');
 
+	})
+	$(".login").on('click', function(){
+		//
 	})
 })
