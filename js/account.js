@@ -1,6 +1,6 @@
 $().ready(function(){
 	var UsuarioNumber = 0,
-		Usuario = [], Selected = 0, InfoAux = [];
+		Usuario = [], Selected = 0, InfoAux = {};
 	$(".frm").on("submit", function(){
 		return false;
 	})
@@ -52,6 +52,9 @@ $().ready(function(){
 		$("#username").object().value = "";
 		$("#efectivo").object().value = "";
 
+		$("#user").object().value = "";
+		$("#passw").object().value = "";
+
 		$("#Banco").object().value = "";
 		$("#Cuenta").object().value = "";
 		$("#sald").object().value = "";
@@ -98,7 +101,7 @@ $().ready(function(){
 			if ($Reg5.test(String($Email)) == false) alert("Ha ingresado el email de forma incorrecta ejemplo: wecp123@gmail.com");
 			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email)) {
 				Oc();
-				InfoAux.push({
+				InfoAux = {
 					Nombre: $Nombre,
 					Apellido: $Apellido,
 					Contra: $Contra,
@@ -109,7 +112,7 @@ $().ready(function(){
 					NIT: $NIT,
 					fNacimiento: $fNacimiento,
 					Respuesta: $Respuesta
-				});
+				};
 			}
 		}else alert("Datos ingresados, no están completados o vacíos.");
 
@@ -163,6 +166,16 @@ $().ready(function(){
 
 	})
 	$(".login").on('click', function(){
-		//
+		$User = $("#user").val().toString();
+		$Pass = $("#passw").val().toString();
+
+		if(Vald($User) && Vald($Pass)){
+			if(Usuario.length >= 1){
+				for(var i = 0; i <= (Usuario.length - 1); i++){
+					if(Usuario.NombreUsuario == $User && Usuario.InfoUser.Contra == $Pass) console.log('yea')
+				}
+				console.log(Usuario)
+			}else alert("Usuario no encontrado.")
+		}else alert("Campos vacíos");
 	})
 })
