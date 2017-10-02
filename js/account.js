@@ -1,6 +1,6 @@
 $().ready(function(){
 	var UsuarioNumber = 0,
-		Usuario = [], Selected = 0;
+		Usuario = [], Selected = 0, InfoAux = [];
 	$(".frm").on("submit", function(){
 		return false;
 	})
@@ -73,7 +73,21 @@ $().ready(function(){
 			if ($Reg3.test($NIT) == false) alert("Ha ingresado el NIT de forma incorrecta ejemplo: 1205-200982-101-0");	
 			if ($Reg4.test(String($fNacimiento)) == false) alert("Ha ingresado su fecha de nacimiento de forma incorrecta ejemplo: 09/09/1999");
 			if ($Reg5.test(String($Email)) == false) alert("Ha ingresado el email de forma incorrecta ejemplo: wecp123@gmail.com");
-			if ($Reg1.test($Celular) == true && $Reg2.test($DUI) == true && $Reg3.test($NIT) == true && $Reg4.test($fNacimiento) == true && $Reg5.test(String($Email) == true) Oc();
+			if ($Reg1.test($Celular) == true && $Reg2.test($DUI) == true && $Reg3.test($NIT) == true && $Reg4.test($fNacimiento) == true && $Reg5.test(String($Email) == true)) {
+				Oc();
+				InfoAux.push({
+					Nombre: $Nombre,
+					Apellido: $Apellido,
+					Contra: $Contra,
+					Direccion: $Direccion,
+					Email: $Email,
+					DUI: $DUI,
+					Celular: $Celular,
+					NIT: $NIT,
+					fNacimiento: $fNacimiento,
+					Respuesta: $Respuesta
+				});
+			}
 				
 		}else alert("Datos ingresados, no están completados o vacíos.");
 
