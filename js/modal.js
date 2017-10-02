@@ -10,6 +10,6 @@ $("#agre").on("click", function(){
 	i = i + 50;
 	a++;
 	$("#count").val(a)
-	$("#mcuenta").html($("#mcuenta").html() + "<input type='text' name='Banco"+a+"' placeholder='Banco'> <input type='text' name='Cuenta"+a+"' placeholder='# de Cuenta'> <input type='text' name='sald"+a+"' placeholder='Saldo Actual'><br>");
+	$("#mcuenta").html($("#mcuenta").html() + "<input type='text' id='Banco"+a+"' placeholder='Banco'> <input type='text' id='Cuenta"+a+"' placeholder='# de Cuenta'> <input type='text' id='sald"+a+"' placeholder='Saldo Actual'><br>");
 	d.getElementById('ventanaregistro').style.height = String(i+"px");
 });
