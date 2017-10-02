@@ -59,7 +59,6 @@ $().ready(function(){
 		$Reg2 = /^[0-9]{8}-[0-9]$/;
 		$Reg3 = /^[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]{1}$/;
 		$Reg4 = /^(\d{4})[-\/](\d{2})[-\/](\d{2})$/;
-		$Reg5 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
 		if(	Vald($Nombre) &&
 			Vald($Apellido) &&
@@ -73,8 +72,8 @@ $().ready(function(){
 			if ($Reg2.test($DUI) == false) alert("Ha ingresado el DUI de forma incorrecta ejemplo: 45123478-9");	
 			if ($Reg3.test($NIT) == false) alert("Ha ingresado el NIT de forma incorrecta ejemplo: 1205-200982-101-0");	
 			if ($Reg4.test(String($fNacimiento)) == false) alert("Ha ingresado su fecha de nacimiento de forma incorrecta ejemplo: 09/09/1999");
-			if ($Reg5.test(String($Email)) == false) alert("Ha ingresado el DUI de forma incorrecta ejemplo: wecp123@gmail.com");
-			if ($Reg1.test($Celular) == true && $Reg2.test($DUI) == true && $Reg3.test($NIT) == true && $Reg4.test(String($fNacimiento)) == true && $Reg5.test(String($Email) ) Oc();
+			
+			if ($Reg1.test($Celular) == true && $Reg2.test($DUI) == true && $Reg3.test($NIT) == true && $Reg4.test($fNacimiento) == true ) Oc();
 				
 		}else alert("Datos ingresados, no están completados o vacíos.");
 
