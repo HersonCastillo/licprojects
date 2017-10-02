@@ -86,6 +86,12 @@ $().ready(function(){
 		$CuentaDefecto = $("#Cuenta").val();
 		$SaldoDefecto = $("#sald").val();
 
+		$BancoAux = [];
+		$CuentaAux = $BancoAux;
+		$SaldoAux = $CuentaAux;
+
+		$Count = $("#count").val();
+
 		if(	Vald($Username) &&
 			NumVal($Efectivo) &&
 			Vald($BancoDefecto) &&
