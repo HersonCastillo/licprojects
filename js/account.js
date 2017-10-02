@@ -39,29 +39,32 @@ $().ready(function(){
 		$(".cabe").css({display: "none"});
 	}
 	var DeleteAll = () => {
-		$("#nameuser").val("");
-		$("#userap").val("");
-		$("#pass").val("");
-		$("#userdir").val("");
-		$("#userem").val("");
-		$("#userdui").val("");
-		$("#usertel").val("");
-		$("#NIT").val("");
-		$("#userdate").val("");
-		$("#userpreg").val("");
-		$("#username").val("");
-		$("#efectivo").val("");
+		$("#nameuser").object().value = "";
+		$("#userap").object().value = "";
+		$("#pass").object().value = "";
+		$("#userdir").object().value = "";
+		$("#userem").object().value = "";
+		$("#userdui").object().value = "";
+		$("#usertel").object().value = "";
+		$("#NIT").object().value = "";
+		$("#userdate").object().value = "";
+		$("#userpreg").object().value = "";
+		$("#username").object().value = "";
+		$("#efectivo").object().value = "";
 
-		$("#Banco").val("");
-		$("#Cuenta").val("");
-		$("#sald").val("");
-		$("#count").val(0);
-		$("#mcuenta").html("")
+		$("#Banco").object().value = "";
+		$("#Cuenta").object().value = "";
+		$("#sald").object().value = "";
+		$("#mcuenta").object().innerHTML = "";
 		a = 0;
 	}
 	$("#close").on('click', function(){
 		x = confirm("¿Está seguro que desea cerrar sesión?");
-		if(x) Re();
+		if(x){
+			console.log(Selected)
+			Re();
+			DeleteAll();
+		}
 		else return false;
 	})
 	$("#boton").on("click", function(){
@@ -154,7 +157,7 @@ $().ready(function(){
 				Cuentas: $CuentaAux,
 				Saldos: $SaldoAux
 			})
-			Selected = UsuarioNumber;
+			Selected = UsuarioNumber - 1;
 			Mo();
 
 		}else alert('Hay datos que rellenar o algún dato no es válido.');
