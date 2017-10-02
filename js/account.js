@@ -171,10 +171,13 @@ $().ready(function(){
 
 		if(Vald($User) && Vald($Pass)){
 			if(Usuario.length >= 1){
-				for(var i = 0; i <= (Usuario.length - 1); i++){
-					if(Usuario.NombreUsuario == $User && Usuario.InfoUser.Contra == $Pass) console.log('yea')
+				var n = false;
+				for(var i = 0; i <= (Usuario.length - 1); i++) if(Usuario[i].NombreUsuario == $User && Usuario[i].InfoUser.Contra == $Pass) {
+					Selected = i;
+					Mo();
+					n = true;
 				}
-				console.log(Usuario)
+				if(!n) alert("Usuario no encontrado.");
 			}else alert("Usuario no encontrado.")
 		}else alert("Campos vacíos");
 	})

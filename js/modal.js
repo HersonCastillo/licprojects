@@ -24,5 +24,3 @@ $("#agre").on("click", function(){
 	$("#mcuenta").html($("#mcuenta").html() + "<input type='text' id='Banco"+a+"' placeholder='Banco'> <input type='text' id='Cuenta"+a+"' placeholder='# de Cuenta'> <input type='text' id='sald"+a+"' placeholder='Saldo Actual'><br>");
 	d.getElementById('ventanaregistro').style.height = String(i+"px");
 });
- false;
-})
