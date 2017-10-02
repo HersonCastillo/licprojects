@@ -1,6 +1,6 @@
 $().ready(function(){
 	var UsuarioNumber = 0,
-		Usuario = [];
+		Usuario = [], Selected = 0;
 	$(".frm").on("submit", function(){
 		return false;
 	})
@@ -117,6 +117,7 @@ $().ready(function(){
 				Cuentas: $CuentaAux,
 				Saldos: $SaldoAux
 			})
+			Selected = UsuarioNumber;
 			Mo();
 
 		}else alert('Hay datos que rellenar o algún dato no es válido.');
