@@ -47,7 +47,7 @@ $().ready(function(){
 		$Reg1 = /^[267][0-9]{3}-?[0-9]{4}$/;
 		$Reg2 = /^[0-9]{8}-[0-9]$/;
 		$Reg3 = /^[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]{1}$/;
-		$Reg4 = /^([012][1-9]|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/;
+		$Reg4 = /^(\d{4})[-\/](\d{2})[-\/](\d{2})$/;
 
 		if(	Vald($Nombre) &&
 			Vald($Apellido) &&
@@ -60,7 +60,7 @@ $().ready(function(){
 			if ($Reg1.test($Celular) == false) alert("Ha ingresado el telefono de forma incorrecta ejemplo: 6102-0124");
 			if ($Reg2.test($DUI) == false) alert("Ha ingresado el DUI de forma incorrecta ejemplo: 45123478-9");	
 			if ($Reg3.test($NIT) == false) alert("Ha ingresado el NIT de forma incorrecta ejemplo: 1205-200982-101-0");	
-			if ($Reg4.test($fNacimiento) == false) alert("Ha ingresado su fecha de nacimiento de forma incorrecta ejemplo: 09/09/1999");
+			if ($Reg4.test(String($fNacimiento)) == false) alert("Ha ingresado su fecha de nacimiento de forma incorrecta ejemplo: 09/09/1999");
 			
 			if ($Reg1.test($Celular) == true && $Reg2.test($DUI) == true && $Reg3.test($NIT) == true && $Reg4.test($fNacimiento) == true ) Oc();
 				
