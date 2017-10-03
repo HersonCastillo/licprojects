@@ -165,8 +165,10 @@ a{
     border-radius: 3px solid;
     width: 600px;
     height: 600px;
-    top: 2%;
-    left: 28%;
+    top: 50%;
+    left: 50%;
+    margin-top: -310px;
+    margin-left: -300px;
     padding-left: 2%;
     padding-top: 2%;
 }   
@@ -256,8 +258,10 @@ a{
     position: absolute;
     border-radius: 3px solid;
     width: 320px;
-    top: 20%;
-    left: 37%;
+    top: 50%;
+    left: 50%;
+    margin-left: -160px;
+    margin-top: -220px;
     padding-left: 2%;
     padding-top: 2%;
 }   
