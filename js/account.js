@@ -101,7 +101,7 @@ $().ready(function(){
 			if ($Reg4.test(String($fNacimiento)) == false) alert("Ha ingresado su fecha de nacimiento de forma incorrecta ejemplo: 09/09/1999");
 			if ($Reg5.test(String($Email)) == false) alert("Ha ingresado el email de forma incorrecta ejemplo: wecp123@gmail.com");
 			if ($Reg6.test(String($Contra)) == false) alert("Ha ingresado la contraseña de forma incorrecta ejemplo: Walter1$");
-			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email) && $Reg6.test(String($Contra)) {
+			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email) && $Reg6.test(String($Contra))) {
 				Oc();
 				InfoAux = {
 					Nombre: $Nombre,
