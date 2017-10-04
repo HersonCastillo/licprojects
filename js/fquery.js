@@ -39,8 +39,8 @@ class fQuery{
 	html(h){
 		h = h || undefined;
 		if(h == undefined){
-			if(this.a) return this.q[0].textContent;
-			else return this.q.textContent;
+			if(this.a) return this.q[0].innerHTML;
+			else return this.object().innerHTML;
 		}else{
 			if(!this.a)this.q.innerHTML = h;
 			else for(var i = 0; i <= (this.q.length - 1); i++) this.q[i].innerHTML = h;
