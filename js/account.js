@@ -86,6 +86,7 @@ $().ready(function(){
 		$Reg3 = /^[0-9]{4}-[0-9]{6}-[0-9]{3}-[0-9]{1}$/;
 		$Reg4 = /^(\d{4})[-\/](\d{2})[-\/](\d{2})$/;
 		$Reg5 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+		$Reg6 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\.@$!%*?&])([A-Za-z\d$@$!%*?&]|[\S]){8,}$/;
 		if(	Vald($Nombre) &&
 			Vald($Apellido) &&
 			Vald($Direccion) &&
@@ -99,7 +100,8 @@ $().ready(function(){
 			if ($Reg3.test($NIT) == false) alert("Ha ingresado el NIT de forma incorrecta ejemplo: 1205-200982-101-0");	
 			if ($Reg4.test(String($fNacimiento)) == false) alert("Ha ingresado su fecha de nacimiento de forma incorrecta ejemplo: 09/09/1999");
 			if ($Reg5.test(String($Email)) == false) alert("Ha ingresado el email de forma incorrecta ejemplo: wecp123@gmail.com");
-			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email)) {
+			if ($Reg6.test(String($Contra)) == false) alert("Ha ingresado la contraseña de forma incorrecta ejemplo: Walter1$");
+			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email) && $Reg6.test(String($Contra)) {
 				Oc();
 				InfoAux = {
 					Nombre: $Nombre,
