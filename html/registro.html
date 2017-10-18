@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>e-Wallet</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<script type="text/javascript" src="../js/fquery.js"></script>
+	<link rel="stylesheet" href="../fonts/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-icons.min.css">
+</head>
+<body>
+	<div class="contenido">
+			<ul class="backgroundslider">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+	</div>
+<div  id="ventana">
+		<div id="logo"><span id="e"><img src="../img/e.png" alt=""><div id="wallet"><span> Wallet</span></div></span></div><br><br>
+		
+			<form class="frm" action="javascript:void(0)">		
+			<label>Ingrese su nombre</label><br>
+			<input type="text" id="nameuser" placeholder="Nombres" autocomplete="off"> <br>
+
+			<label>Ingrese su apellido</label><br>
+			<input type="text" id="userap" placeholder="Apellidos" autocomplete="off"><br>
+			
+			<label>Ingrese su contraseña</label><br>
+			<input type="password" id="pass" placeholder="Contraseña" autocomplete="off"><br>
+			
+			<label>Ingrese su correo electronico	</label><br>
+			<input type="email" id="userem" placeholder="@Email" autocomplete="off"><br>
+			
+			<label>Ingrese su dirección actual</label><br>
+			<input type="text" id="userdir" placeholder="Direción" autocomplete="off">
+			<br>
+			<label>Ingrese su DUI</label><br>
+			<input type="text" id="userdui" placeholder="DUI: ########-#" autocomplete="off"><br>	
+			<label>Ingrese su NIT</label><br>
+			<input type="text" id="NIT" placeholder="NIT" autocomplete="off">
+			<br>
+			<label>Ingrese su Telefono/Celular</label><br>
+			<input type="tel" id="usertel" placeholder="Telefono: ####-####" autocomplete="off">
+			<br>
+			<label>Ingrese su fecha de nacimiento</label><br>
+			<input type="date" id="userdate" autocomplete="off">
+			<div class="pregunta">
+			<label>Si no recuernas tu contraseña responde a esta pregunta: </label><br>
+			<select name="" id="se">
+				<option value="1">¿Cual es el nombre de tu mascota?</option>
+				<option value="2">¿En que colegios estudias/estudio?</option>
+				<option value="3">¿Cual es tu pelicula/serie favorita?</option>
+				<option value="4">¿Cual es tu anción preferida?</option>
+				<option value="5">¿Cual es tu banda musical preferida?</option>	
+			</select>&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" id="userpreg" placeholder="Escriba su Respuesta" autocomplete="off">
+			</div>
+			<button id="boton">Registarse</button><br>
+			<a href="../index.html">¿Ya tienes un cuenta? Inicia sesion Click aquí</a>
+			</form>
+		</div>
+		<script type="text/javascript" src="../js/account.js"></script>
+	</body>
+</html>
