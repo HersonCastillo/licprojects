@@ -473,7 +473,6 @@ ul{
     -o-transition: left .5s ease;
     transition: left .5s ease;
     z-index: 1000;
-    visibility: hidden;
 }
 #menu_principal a, #menu_principal label{
     color: #868686;
