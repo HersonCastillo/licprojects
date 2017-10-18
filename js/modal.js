@@ -1,7 +1,3 @@
-//pantalla modal para el registro
-function mostrar(valor){
-	$("#bgventana").css({visibility: valor})
-}
 //pantalla modal para la recuperacion de contraseña
 function mostrarc(valor){
 	$("#bgventanac").css({visibility: valor});
@@ -27,3 +23,4 @@ $("#agre").on("click", function(){
 	}else 
 		return false
 });
+
