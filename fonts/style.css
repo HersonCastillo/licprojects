@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'font';
-  src:  url('font.eot?dds79w');
-  src:  url('font.eot?dds79w#iefix') format('embedded-opentype'),
-    url('font.ttf?dds79w') format('truetype'),
-    url('font.woff?dds79w') format('woff'),
-    url('font.svg?dds79w#font') format('svg');
+  src:  url('font.eot?s1lvzi');
+  src:  url('font.eot?s1lvzi#iefix') format('embedded-opentype'),
+    url('font.font.ttf?s1lvzi') format('truetype'),
+    url('font.woff?s1lvzi') format('woff'),
+    url('font.svg?s1lvzi#font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,8 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-lock:before {
+.icon-credit:before {
   content: "\e900";
+}
+.icon-lock:before {
+  content: "\e902";
 }
 .icon-user:before {
   content: "\e901";
