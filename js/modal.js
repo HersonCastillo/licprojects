@@ -2,15 +2,6 @@
 function mostrarc(valor){
 	$("#bgventanac").css({visibility: valor});
 }
-//pantalla modal para mostrar el efectivo
-$("#ef").on("click", function(){ 
-	$(".efec").css({display: "block"})
- });
-//muestra la cuenta
-$("#cu").on("click", function(){ 
-	$(".efec").css({display: "block"})
- });
-
 var i = 500;//alto de la pagina
 var a = 0;
 $("#agre").on("click", function(){
