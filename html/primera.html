@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>e-Wallet</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<script type="text/javascript" src="../js/fquery.js"></script>
+	<link rel="stylesheet" href="../fonts/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-icons.min.css">
+</head>
+<body>
+	<div class="contenido">
+			<ul class="backgroundslider">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+	</div>
+<div  id="ventanaregistro">
+		<form class="frm">
+			<img src="../img/wallet-512.png" alt="" >
+			<div class="form-input">
+			<input type="email" id="username" placeholder="Nombre de usuario" autocomplete="off">
+			</div>
+			<div class="form-input">
+			<input type="number" id="efectivo" placeholder="Efectivo">
+			</div>
+			<label id="l">Ingresar cuentas bancaria</label>
+			<div id="cuenta">
+			<input type="text" id="Banco" placeholder="Banco">
+			<input type="text" id="Cuenta" placeholder="# de Cuenta">
+			<input type="text" id="sald" placeholder="Saldo Actual"><br>
+			<label id="l">¿Desea agragar más cuentas? clic al boton agregar</label>
+			<input type="button" name="button" value="AGREGAR" class="button" id="agre"><br><br>
+			</div>
+			<div id="mcuenta">
+				
+			</div>
+			<input type="button" name="button" value="INGRESAR" class="button" id="ing"><br><br>
+
+			<input type="hidden" id="count" value="0">
+		</form>
+	</div>
+		<script type="text/javascript" src="../js/account.js"></script>
+		<script type="text/javascript" src="../js/agre.js"></script>
+	</body>
+</html>
