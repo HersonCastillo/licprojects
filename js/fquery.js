@@ -145,7 +145,89 @@ class fQuery{
 			}else console.error('Error: The argument set is not a function.')
 		}else console.error('Error: An error occurred in the $:on(,) function, two arguments are missing.');
 	}
-
+	fadeOut(){
+		var x = this.q;
+		if(this.a){
+			setTimeout(function(){
+				for(var i = 0; i <= (x.length - 1); i++){
+					x[i].style.transition = ".2s ease-in-out";
+					x[i].style.opacity = 1;
+				}
+				setTimeout(function(){
+					for(var i = 0; i <= (x.length - 1); i++) x[i].style.opacity = 0;
+					setTimeout(function(){
+						for(var i = 0; i <= (x.length - 1); i++) x[i].style.display = "none";
+					}, 300)
+				},1)
+			},1)
+			return;		
+		}else{
+			setTimeout(function(){
+				x.style.transition = ".2s ease-in-out";
+				x.style.opacity = 1;
+				setTimeout(function(){
+					x.style.opacity = 0;
+					setTimeout(function(){
+						x.style.display = "none"
+					}, 300)
+				},1)
+			},1)
+			return;
+		}
+	}
+	fadeIn(){
+		var x = this.q;
+		if(this.a){
+			setTimeout(function(){
+				for(var i = 0; i <= (x.length - 1); i++){
+					if(x[i].style.display == "none" || x[i].style.display == ""){
+						x[i].style.transition = ".2s ease-in-out";
+						x[i].style.opacity = 0;
+					}
+				}
+				setTimeout(function(){
+					for(var i = 0; i <= (x.length - 1); i++) if(x[i].style.display == "none" || x[i].style.display == "") x[i].style.display = "block"
+					setTimeout(function(){
+						for(var i = 0; i <= (x.length - 1); i++) x[i].style.opacity = 1;
+					}, 300)
+				},1)
+			},1)
+			return;		
+		}else{
+			if(x.style.display == "none" || x.style.display == ""){
+				setTimeout(function(){
+					x.style.transition = ".2s ease-in-out";
+					x.style.opacity = 0;
+					setTimeout(function(){
+						x.style.display = "block"
+						setTimeout(function(){
+							x.style.opacity = 1;
+						}, 300)
+					},1)
+				},1)
+			}
+			return;
+		}
+	}
+	append(h){
+		if(h == undefined) console.error('Error: An error occurred in the $:append() function, an argument is missing.');
+		else{
+			if(!this.a)this.q.innerHTML += h;
+			else for(var i = 0; i <= (this.q.length - 1); i++) this.q[i].innerHTML += h;
+		}
+		return;
+	}
+	delay(f, t){
+		f = f || undefined;
+		t = t || undefined;
+		if(t === undefined) t = 1;
+		if(f !== undefined && typeof f === "function"){
+			var clase = this;
+			setTimeout(function(){
+				f(clase)
+			}, t)
+		}else console.error('Error: An error occurred in the $:delay() function, an argument is missing.');
+	}
 }
 var $ = (elem) => {
 	return new fQuery(elem);
