@@ -101,6 +101,7 @@
     margin: 0 auto;
     margin-top: 160px;
     visibility: visible;
+    transition: .5s all ease-in-out;
 }
 .container img{
     width: 120px;
@@ -176,6 +177,7 @@ a{
     padding-left: 2%;
     padding-top: 2%;
     box-sizing: border-box;
+    transition: .5s all ease-in-out;
 }
 #ventana a{
     color: #000;
@@ -281,6 +283,7 @@ a{
     padding-left: 2%;
     padding-top: 2%;
     display: none;
+    transition: .5s all ease-in-out;
 }   
 #ventanac a{
     position: absolute;
