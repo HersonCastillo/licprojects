@@ -4,6 +4,9 @@ $().ready(function(){
 	$(".frm").on("submit", function(){
 		return false;
 	})
+	$(".frc").on('click', function(){
+		alert('a')
+	})
 	var SinEspacios = (x)=>{
 		if(typeof x === "string"){
 			x = x.trim();
