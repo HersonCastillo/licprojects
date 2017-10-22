@@ -1,11 +1,9 @@
 $().ready(function(){
+	alert('a')
 	var UsuarioNumber = 0,
 		Usuario = [], Selected = 0, InfoAux = {};
 	$(".frm").on("submit", function(){
 		return false;
-	})
-	$(".frc").on('click', function(){
-		alert('a')
 	})
 	var SinEspacios = (x)=>{
 		if(typeof x === "string"){
