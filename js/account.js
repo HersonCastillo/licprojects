@@ -1,5 +1,4 @@
-$().ready(function(){
-	alert('a')
+$(w).ready(function(){
 	var UsuarioNumber = 0,
 		Usuario = [], Selected = 0, InfoAux = {};
 	$(".frm").on("submit", function(){
@@ -62,14 +61,6 @@ $().ready(function(){
 		$("#mcuenta").object().innerHTML = "";
 		a = 0;
 	}
-	$("#close").on('click', function(){
-		x = confirm("¿Está seguro que desea cerrar sesión?");
-		if(x){
-			Re();
-			DeleteAll();
-		}
-		else return false;
-	})
 	$("#boton").on("click", function(){
 
 		$Nombre = $("#nameuser").val();
