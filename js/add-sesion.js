@@ -42,6 +42,7 @@ $(w).ready(function(){
 				Saldos: JSON.stringify($SaldoAux)
 			};
 			DB.setItem("log-in", JSON.stringify(Usuario));
+			location.href = "usuario.html";
 		}else alert('Hay datos que rellenar o algún dato no es válido.');
 
 	})
