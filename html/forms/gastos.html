@@ -14,6 +14,66 @@
 	<div class="cabe">
 		<div id="logo"><span id="e"><img src="../../img/e.png" alt=""><span id="wallet"> Wallet</span></span></div>
 	</div>
+	<div class="con">
+			<span>Ver gastos: </span><br><br>
+		<!-- aqui van a ir ls cuentas -->
+		<div id="gas">
+			
+		</div>
+	</div>
+ 		<div class="CON1">
+			<span>Agregar nuevos gastos: </span><br><br>
+			<label>Fecha del nuevo gasto:</label><br>
+			<input type='date' id='men'><br>
+
+			<label>Motivo del nuevo gasto:</label><br>
+			<select name="" id="motivo">
+				<option value="1">Pago de celular</option>
+				<option value="2">Pago de luz eléctrica</option>
+				<option value="3">Pago de agua</option>
+				<option value="4">Pago de casa/alquiler</option>
+				<option value="5">Pago de cable</option>
+				<option value="6">Pago de internet</option>
+				<option value="7">Pago de educación</option>
+				<option value="8">Supermercado</option>
+				<option value="9">Cine</option>
+				<option value="10">Discoteca</option>
+				<option value="11">Teatro</option>
+				<option value="12">Ropa</option>
+				<option value="13">Restaurante</option>
+				<option value="14">Tecnología</option>
+				<option value="15">Mascota</option>
+				<option value="16">Gasolina</option>
+				<option value="17">Preparaciones</option>
+				<option value="18">Otros</option>
+			</select>
+
+			<div id="otro">
+				<label for="">Otro motivo</label><br>
+				<input type="text" placeholder="Especifique el motivo" id="mota">
+			</div>
+			<label>Monto gastado: </label><br>
+			<input type='number' id='monto' step="0.05" value="0.00" min="0.00"><br> 
+
+			<label>Cuenta en que se almacena el nuevo ingreso: </label><br><br>
+			<form action="" id="form">
+				<input type="radio" id="chk1" value="efe" name="chk"><label for="chk1">Efectivo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" id="chk2" value="aho" name="chk"><label for="chk2">Cuenta de ahorro</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" id="chk3" value="tar" name="chk"><label for="chk3">Tareta de credito</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</form><br>
+			
+			<div id="aho1">
+				<label for="">Cuenta de ahorro en el que se almacenara el gasto</label>
+				<input type="text">
+			</div>
+			<div id="tar1">
+				<label for="">Tarjeta decredito en la que se almacenara el gasto</label>
+				<input type="text">
+			</div>
+
+			<input type="button" name="button" value="AGREGAR NUEVO INGRESO" class="bot" id="ingre"><br><br>
+		</div>
+	
 		<div class="conta">
 		<nav>
 			<span class="mif-chevron-left mif-3x b"></span>
@@ -32,7 +92,7 @@
 					<ul>
 						<li><a id="ef" href="efectivo.html">Efectivo</a></li>
 						<li><a id="cu" href="cuenta.html">Cuentas</a></li>
-						<li><a id="" href="tarjetas.html">Tarjetas</a></li>
+						<li><a id="" href="#">Tarjetas</a></li>
 					</ul>
 				</li>
 
@@ -47,21 +107,27 @@
 
 					<ul>
 						<li><a id="" href="ingresos.html">Ver ingresos</a></li>
-						<li><a id="" href="#">Agregar nuevo ingreso</a></li>
+						<li><a id="" href="Aingresos.html">Agregar nuevo ingreso</a></li>
 					</ul>
 					
 				</li>
 
 
-				<li id="seleccion"><a id="" href="#"><span class="mif-dollars mif-3x principales"></span>Gastos</a></li>
+				<li id="seleccion"><a id="" href="gastos.html"><span class="mif-dollars mif-3x principales"></span>Gastos</a></li>
 				<li><a id="" href="conf.html"><span class="mif-cog mif-3x principales"></span>Configuraciones</a></li>
-				<li><a id="" href="esta.html"><span class="mif-chart-dots mif-3x principales"></span>Estadística</a></li>
+				<li><a id="" href="esta.html"><span class="mif-chart-dots mif-3x principales"></span>Estadísticas</a></li>
 				<li><a id="close"><span class="mif-not mif-3x principales"></span>Cerrar sesión</a></li>
 			</ul>
 		</nav>
 	</div>	
 	<script type="text/javascript" src="../../js/close.js"></script>
 	<script type="text/javascript" src="../../js/derecha.js"></script>
+
+
 </body>
-</head>
+<footer>
+	<div class="footer01">
+		<p>©WALLET</p><p id="abajo">©CCENTERPRICE</p>
+	</div>
+</footer>
 </html>

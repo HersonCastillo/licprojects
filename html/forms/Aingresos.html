@@ -14,6 +14,23 @@
 	<div class="cabe">
 		<div id="logo"><span id="e"><img src="../../img/e.png" alt=""><span id="wallet"> Wallet</span></span></div>
 	</div>
+	<!-- O agregar nuevos ingresando los datos correspondientes ((fecha, motivo, monto, cuenta donde se almacenó).
+ 	-->
+ 		<div class="con1">
+			<span>Agregar nuevos ingresos: </span><br><br>
+			<label>Fehca del nuevo ingreso:</label><br>
+			<input type='date' id='men'><br>
+
+			<label>Motivo del nuevo ingreso:</label><br>
+			<input type='text' id='motivo' placeholder='Banco'><br> 
+
+			<label>Monto a ingresar: </label><br>
+			<input type='number' id='monto' step="0.05" value="0.00" min="0.00" max="100.00"><br> 
+
+			<label>Cuenta en que se almacena el nuevo ingreso: </label><br>
+			<input type='text' id='cuenta' placeholder='Nombre de la cuenta'><br>
+			<input type="button" name="button" value="AGREGAR NUEVO INGRESO" class="bot" id="ingre"><br><br>
+		</div>
 		<div class="conta">
 		<nav>
 			<span class="mif-chevron-left mif-3x b"></span>
@@ -63,5 +80,10 @@
 	<script type="text/javascript" src="../../js/close.js"></script>
 	<script type="text/javascript" src="../../js/derecha.js"></script>
 </body>
+<footer>
+	<div class="footer0">
+		<p>©WALLET</p><p id="abajo">©CCENTERPRICE</p>
+	</div>
+</footer>
 </head>
 </html>
