@@ -59,6 +59,7 @@ $(w).ready(function(){
 				};
 				DB.setItem("pre-aux-reg", JSON.stringify(InfoAux));
 				DB.setItem("inicializate","true");
+				DB.setItem("id", JSON.stringify({email:$Email,password:$Contra}));
 				location.href = "primera.html";
 			}
 		}else alert("Datos ingresados, no están completados o vacíos.");
