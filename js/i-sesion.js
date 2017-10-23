@@ -1,3 +1,9 @@
+var DB = localStorage;
+
+var redir_ = DB.getItem("redir");
+
+if(redir_ == "true") location.href = "html/usuario.html";
+
 $(w).ready(function(){
 	$(".login").on('click', function(){
 		$User = $("#user").val().toString();
