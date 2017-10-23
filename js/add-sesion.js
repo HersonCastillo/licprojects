@@ -1,4 +1,5 @@
 var DB = localStorage;
+
 $(w).ready(function(){
 	$("#ing").on("click", function(){
 		$Username = $("#username").val();

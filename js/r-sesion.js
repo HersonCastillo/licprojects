@@ -1,6 +1,11 @@
 var DB = localStorage;
 
 $(w).ready(function(){
+
+	var redir_ = DB.getItem("redir");
+	if(redir_ === "true") location.herf = "usuario.html";
+	else location.href = "../index.html";
+	
 	var InfoAux = {};
 	$(".frm").on("submit", function(){
 		return false;
