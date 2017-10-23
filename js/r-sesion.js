@@ -5,43 +5,6 @@ $(w).ready(function(){
 	$(".frm").on("submit", function(){
 		return false;
 	})
-	var Mo = () => {
-		$(".contenido").css({visibility: "hidden"});
-		$(".container").css({visibility: "hidden"});
-		$("#ventanaregistro").css({display: "none"});
-		$(".conta").css({visibility: "visible"});
-		$(".cabe").css({display: "block"});
-	}
-	var Re = () => {
-		$(".contenido").css({visibility: "visible"});
-		$(".container").css({visibility: "visible"});
-		$("#ventanaregistro").css({display: "inline-block"});
-		$(".conta").css({visibility: "hidden"});
-		$(".cabe").css({display: "none"});
-	}
-	var DeleteAll = () => {
-		$("#nameuser").object().value = "";
-		$("#userap").object().value = "";
-		$("#pass").object().value = "";
-		$("#userdir").object().value = "";
-		$("#userem").object().value = "";
-		$("#userdui").object().value = "";
-		$("#usertel").object().value = "";
-		$("#NIT").object().value = "";
-		$("#userdate").object().value = "";
-		$("#userpreg").object().value = "";
-		$("#username").object().value = "";
-		$("#efectivo").object().value = "";
-
-		$("#user").object().value = "";
-		$("#passw").object().value = "";
-
-		$("#Banco").object().value = "";
-		$("#Cuenta").object().value = "";
-		$("#sald").object().value = "";
-		$("#mcuenta").object().innerHTML = "";
-		a = 0;
-	}
 	$("#boton").on("click", function(){
 
 		$Nombre = $("#nameuser").val();

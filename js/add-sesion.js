@@ -1,5 +1,4 @@
 var DB = localStorage;
-
 $(w).ready(function(){
 	$("#ing").on("click", function(){
 		$Username = $("#username").val();
@@ -35,17 +34,14 @@ $(w).ready(function(){
 				$CuentaAux.push($CA);
 				$SaldoAux.push($SA);
 			}
-			Usuario.push({
-				id: UsuarioNumber++,
+			var Usuario = {
 				NombreUsuario: $Username,
-				InfoUser: InfoAux,
-				Bancos: $BancoAux,
-				Cuentas: $CuentaAux,
-				Saldos: $SaldoAux
-			})
-			Selected = UsuarioNumber - 1;
-			Mo();
-
+				InfoUser: DB.getItem("pre-aux-reg"),
+				Bancos: JSON.stringify($BancoAux),
+				Cuentas: JSON.stringify($CuentaAux),
+				Saldos: JSON.stringify($SaldoAux)
+			};
+			DB.setItem("log-in", JSON.stringify(Usuario));
 		}else alert('Hay datos que rellenar o algún dato no es válido.');
 
 	})
