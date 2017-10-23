@@ -18,6 +18,31 @@
 				<li></li>
 			</ul>
 	</div>
+<div  id="ventanaregistro">
+		<form class="frm">
+			<img src="../img/wallet-512.png" alt="" >
+			<div class="form-input">
+			<input type="email" id="username" placeholder="Nombre de usuario" autocomplete="off">
+			</div>
+			<div class="form-input">
+			<input type="number" id="efectivo" placeholder="Efectivo">
+			</div>
+			<label id="l">Ingresar cuentas bancaria</label>
+			<div id="cuenta">
+			<input type="text" id="Banco" placeholder="Banco">
+			<input type="text" id="Cuenta" placeholder="# de Cuenta">
+			<input type="text" id="sald" placeholder="Saldo Actual"><br>
+			<label id="l">¿Desea agragar más cuentas? clic al boton agregar</label>
+			<input type="button" name="button" value="AGREGAR" class="button" id="agre"><br><br>
+			</div>
+			<div id="mcuenta">
+				
+			</div>
+			<input type="button" name="button" value="INGRESAR" class="button" id="ing"><br><br>
+
+			<input type="hidden" id="count" value="0">
+		</form>
+	</div>
 <div  id="ventana">
 		<div id="logo"><span id="e"><img src="../img/e.png" alt=""><div id="wallet"><span> Wallet</span></div></span></div><br><br>
 		
@@ -57,9 +82,10 @@
 			</select>&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="text" id="userpreg" placeholder="Escriba su Respuesta" autocomplete="off">
 			<button id="boton">Registarse</button><br>
-			<a href="../index.html">¿Ya tienes un cuenta? Inicia sesion Click aquí</a>
+			<a href="../index.html">¿Ya tienes un cuenta? Inicia sesión clic aquí</a>
 			</form>
 		</div>
-		<script type="text/javascript" src="../js/account.js"></script>
+		<script type="text/javascript" src="../js/r-sesion.js"></script>
+		<script type="text/javascript" src="../js/Fn.js"></script>
 	</body>
 </html>

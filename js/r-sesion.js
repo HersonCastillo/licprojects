@@ -1,29 +1,10 @@
+var DB = localStorage;
+
 $(w).ready(function(){
-	var UsuarioNumber = 0,
-		Usuario = [], Selected = 0, InfoAux = {};
+	var InfoAux = {};
 	$(".frm").on("submit", function(){
 		return false;
 	})
-	var SinEspacios = (x)=>{
-		if(typeof x === "string"){
-			x = x.trim();
-			return x;
-		}else return false;
-	}
-	var Vald = (x)=>{
-		r = SinEspacios(x);
-		if(r !== "" && r !== false) return true;
-		else return false;
-	}
-	var NumVal = (x) =>{
-		if(!isNaN(x) && x.length >= 1) return true;
-		else return false;
-	}
-	var Oc = () => {
-		$("#ventanaregistro").css({visibility: "visible"});
-		$(".container").css({visibility: "hidden"});
-		$("#bgventana").css({visibility: "hidden"});
-	}
 	var Mo = () => {
 		$(".contenido").css({visibility: "hidden"});
 		$(".container").css({visibility: "hidden"});
@@ -94,7 +75,7 @@ $(w).ready(function(){
 			if ($Reg5.test(String($Email)) == false) alert("Ha ingresado el email de forma incorrecta ejemplo: wecp123@gmail.com");
 			if ($Reg6.test(String($Contra)) == false) alert("Ha ingresado la contraseña de forma incorrecta ejemplo: Walter1$");
 			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email) && $Reg6.test(String($Contra))) {
-				Oc();
+				var question = $("#se").object().selectedIndex;
 				InfoAux = {
 					Nombre: $Nombre,
 					Apellido: $Apellido,
@@ -105,74 +86,14 @@ $(w).ready(function(){
 					Celular: $Celular,
 					NIT: $NIT,
 					fNacimiento: $fNacimiento,
+					q: question,
 					Respuesta: $Respuesta
 				};
+				DB.setItem("pre-aux-reg", JSON.stringify(InfoAux));
+				DB.setItem("inicializate","true");
+				location.href = "primera.html";
 			}
 		}else alert("Datos ingresados, no están completados o vacíos.");
 
-	})
-	$("#ing").on("click", function(){
-		$Username = $("#username").val();
-		$Efectivo = $("#efectivo").val();
-
-		$BancoDefecto = $("#Banco").val();
-		$CuentaDefecto = $("#Cuenta").val();
-		$SaldoDefecto = $("#sald").val();
-
-		$BancoAux = [];
-		$CuentaAux = $BancoAux;
-		$SaldoAux = $CuentaAux;
-
-		$Count = $("#count").val();
-
-		if(	Vald($Username) &&
-			NumVal($Efectivo) &&
-			Vald($BancoDefecto) &&
-			NumVal($CuentaDefecto) &&
-			NumVal($SaldoDefecto)
-		){
-
-			$BancoAux.push($BancoDefecto);
-			$CuentaAux.push($CuentaDefecto);
-			$SaldoAux.push($SaldoDefecto);
-
-			for(var j = 1; j <= $Count; j++){
-				$BA = $("#Banco" + j).val();
-				$CA = $("#Cuenta" + j).val();
-				$SA = $("#sald" + j).val();
-
-				$BancoAux.push($BA);
-				$CuentaAux.push($CA);
-				$SaldoAux.push($SA);
-			}
-			Usuario.push({
-				id: UsuarioNumber++,
-				NombreUsuario: $Username,
-				InfoUser: InfoAux,
-				Bancos: $BancoAux,
-				Cuentas: $CuentaAux,
-				Saldos: $SaldoAux
-			})
-			Selected = UsuarioNumber - 1;
-			Mo();
-
-		}else alert('Hay datos que rellenar o algún dato no es válido.');
-
-	})
-	$(".login").on('click', function(){
-		$User = $("#user").val().toString();
-		$Pass = $("#passw").val().toString();
-
-		if(Vald($User) && Vald($Pass)){
-			if(Usuario.length >= 1){
-				var n = false;
-				for(var i = 0; i <= (Usuario.length - 1); i++) if(Usuario[i].NombreUsuario == $User && Usuario[i].InfoUser.Contra == $Pass) {
-					Selected = i;
-					Mo();
-					n = true;
-				}
-				if(!n) alert("Usuario no encontrado.");
-			}else alert("Usuario no encontrado.")
-		}else alert("Campos vacíos");
 	})
 })

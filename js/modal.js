@@ -14,12 +14,10 @@ $(w).ready(function(){
 			e.fadeOut();
 		}, 1)
 	})
-
 	$("#bgventanac").on('click', function(){
 		if(!bandera) $("#bgventanac").delay(function(e){
 						e.fadeOut();
 					 }, 50)
-		
 		bandera = false;
 	})
 	$("#ventanac").on('click', function(){
