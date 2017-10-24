@@ -1,10 +1,6 @@
 function detector() {
 	var formulario = document.getElementById('form');
-	for (var i = 0; i < formulario.chk.length; i++) {
-		if (formulario.chk[i].checked) {
-			break;
-		}
-	}
+	for (var i = 0; i < formulario.chk.length; i++) if (formulario.chk[i].checked) break;
 	return i;
 }
 var formulario = document.getElementById('form').onchange = function(){
