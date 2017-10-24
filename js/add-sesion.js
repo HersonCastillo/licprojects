@@ -46,16 +46,19 @@ $(w).ready(function(){
 					$CA = $("#Cuenta" + j).val();
 					$SA = $("#sald" + j).val();
 
-					$BancoAux.push($BA);
-					$CuentaAux.push($CA);
-					$SaldoAux.push($SA);
+					if($BA != "" && parseFloat($BA) != 0) $BancoAux.push($BA);
+					if($CA != "" && parseFloat($CA) != 0) $CuentaAux.push($CA);
+					if($SA != "" && parseFloat($SA) != 0) $SaldoAux.push($SA);
 				}
 				var Usuario = {
 					NombreUsuario: $Username,
 					InfoUser: DB.getItem("pre-aux-reg"),
 					Bancos: JSON.stringify($BancoAux),
 					Cuentas: JSON.stringify($CuentaAux),
-					Saldos: JSON.stringify($SaldoAux)
+					Saldos: JSON.stringify($SaldoAux),
+					Ingresos: [],
+					Gastos: [],
+					Efectivo: $Efectivo
 				};
 
 				if(DB.getItem("users") != null && DB.getItem("users") != ""){
