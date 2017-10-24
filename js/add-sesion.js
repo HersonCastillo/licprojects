@@ -59,7 +59,9 @@ $(w).ready(function(){
 					Ingresos: [],
 					Gastos: [],
 					Tarjetas: [],
-					Efectivo: $Efectivo
+					Efectivo: $Efectivo,
+					Cobro: "Efectivo",
+					AvisoMinimo: 10 
 				};
 
 				if(DB.getItem("users") != null && DB.getItem("users") != ""){

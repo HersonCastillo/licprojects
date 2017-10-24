@@ -172,7 +172,6 @@ footer{
 .con{
     padding: 2%;
     width: 500px;
-    height: 100px;
     background-color: rgba(243, 243, 243, 1);
     border-radius: 4px;
     margin: 0 auto;
@@ -1190,4 +1189,7 @@ nav ul li:hover > ul {
     .frm{
         margin-top: 7%;
     }
+}
+#av-conf-pri{
+  display: none;
 }
