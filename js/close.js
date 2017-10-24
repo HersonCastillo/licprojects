@@ -5,7 +5,11 @@ $("#close").on('click', function(){
 	DB.setItem("pre-aux-reg", "");
 	DB.setItem("inicializate", false);
 
-	location.href = "../index.html";
+	var dir = location.href;
+	dir = dir.split("/");
+	if(dir[dir.length - 2] == "forms") location.href = "../../index.html";
+	else location.href = "../index.html";
+	
 })
 
-// undetected
+//
