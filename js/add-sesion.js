@@ -53,11 +53,12 @@ $(w).ready(function(){
 				var Usuario = {
 					NombreUsuario: $Username,
 					InfoUser: DB.getItem("pre-aux-reg"),
-					Bancos: JSON.stringify($BancoAux),
+					/*Bancos: JSON.stringify($BancoAux),*/
 					Cuentas: JSON.stringify($CuentaAux),
-					Saldos: JSON.stringify($SaldoAux),
+					/*Saldos: JSON.stringify($SaldoAux),*/
 					Ingresos: [],
 					Gastos: [],
+					Tarjetas: [],
 					Efectivo: $Efectivo
 				};
 

@@ -1,5 +1,5 @@
 var info = MyInfo();
-var saldos = JSON.parse(info.Saldos);
+var saldos = JSON.parse(info.Cuentas);
 
 var count = saldos.length / 3, sald = 0;
 
