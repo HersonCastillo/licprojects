@@ -7,6 +7,7 @@ if(redir_ == "true") location.href = "usuario.html";
 $(w).ready(function(){
 
 	DB.setItem("inicializate","");
+	DB.setItem("pre-aux-reg", "");
 
 	var InfoAux = {};
 	$(".frm").on("submit", function(){
