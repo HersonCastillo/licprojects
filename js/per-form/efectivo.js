@@ -1,3 +1,8 @@
 var info = MyInfo();
+var saldos = JSON.parse(info.Saldos);
 
-$("#saldo-val").val("$10")
+var count = saldos.length / 3, sald = 0;
+
+for(var i = 0; i <= (saldos.length - 1); i++) if((i + 1) % 3 == 0) sald = parseFloat(parseFloat(sald) + parseFloat(saldos[i]));
+
+$("#saldo-val").val("$" + sald);
