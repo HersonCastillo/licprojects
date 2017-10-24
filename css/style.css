@@ -259,13 +259,13 @@ footer{
 .con2{
     padding: 2%;
     width: 500px;
+    height: 170px;
     background-color: rgba(243, 243, 243, 1);
     border-radius: 4px;
     margin: 0 auto;
     margin-top: 2%;
     visibility: visible;
     transition: .5s all ease-in-out;
-    position: relative;
 }
 .con2 span{
     font-size: 1.5em;
@@ -296,7 +296,7 @@ footer{
 .con3 span{
     font-size: 1.5em;
 }
-.con3 input[type="text"], .con3 input[type="text"], .con3 input[type="date"]{
+.con3 input[type="text"], .con3 input[type="number"], .con3 input[type="date"]{
     width: 99%;
     height: 35px;
     font-size: 18px;
