@@ -1,6 +1,6 @@
 var DB = localStorage;
 
-var redir_ = DB.getItem("inicializate");
+var redir_ = DB.getItem("redir");
 
 if(redir_ == "true") location.href = "usuario.html";
 

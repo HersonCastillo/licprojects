@@ -18,7 +18,6 @@ var Unistall = () => {
 	DB.setItem("users","");
 	DB.setItem("inicializate","");
 	DB.setItem("log-in","");
-	DB.setItem("id","");
 	DB.setItem("pre-aux-reg","");
 }
 
