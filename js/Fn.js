@@ -13,6 +13,14 @@ var NumVal = (x) =>{
 	if(!isNaN(x) && x.length >= 1) return true;
 	else return false;
 }
+var Unistall = () => {
+	var DB = localStorage;
+	DB.setItem("users","");
+	DB.setItem("inicializate","");
+	DB.setItem("log-in","");
+	DB.setItem("id","");
+	DB.setItem("pre-aux-reg","");
+}
 
 //Funciones fuera del alcance de fquery
 //No incluir contenido fquery en este archivo

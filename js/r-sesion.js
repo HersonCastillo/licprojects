@@ -1,10 +1,12 @@
 var DB = localStorage;
 
-var redir_ = DB.getItem("redir");
+var redir_ = DB.getItem("inicializate");
 
 if(redir_ == "true") location.href = "usuario.html";
 
 $(w).ready(function(){
+
+	DB.setItem("inicializate","");
 
 	var InfoAux = {};
 	$(".frm").on("submit", function(){
@@ -44,6 +46,7 @@ $(w).ready(function(){
 			if ($Reg6.test(String($Contra)) == false) alert("Ha ingresado la contraseña de forma incorrecta ejemplo: Walter1$");
 			if ($Reg1.test($Celular)  && $Reg2.test($DUI)  && $Reg3.test($NIT)  && $Reg4.test($fNacimiento)  && $Reg5.test($Email) && $Reg6.test(String($Contra))) {
 				var question = $("#se").object().selectedIndex;
+
 				InfoAux = {
 					Nombre: $Nombre,
 					Apellido: $Apellido,
@@ -57,9 +60,10 @@ $(w).ready(function(){
 					q: question,
 					Respuesta: $Respuesta
 				};
+
 				DB.setItem("pre-aux-reg", JSON.stringify(InfoAux));
 				DB.setItem("inicializate","true");
-				DB.setItem("id", JSON.stringify({email:$Email,password:$Contra}));
+
 				location.href = "primera.html";
 			}
 		}else alert("Datos ingresados, no están completados o vacíos.");
