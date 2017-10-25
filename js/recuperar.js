@@ -26,6 +26,7 @@ $("#bot").on('click', function(){
 							users[i].InfoUser = JSON.stringify(info);
 							DB.users = JSON.stringify(users);
 							alert('Contraseña reestablecida.');
+							location.reload();
 						}
 					}
 				}else alert('Contraseña inválida: Ejemplo => Walter$1');
