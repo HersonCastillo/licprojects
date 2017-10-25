@@ -32,5 +32,19 @@ var MyInfo = () => {
 	for(var j = 0; j <= (info.length - 1); j++) if(info[j].NombreUsuario == id) return info[j];;
 	return null;
 }
+var Ingresos = () => {
+	var info = MyInfo();
+	var _c = info.Ingresos.length;
+	var suma = 0;
+	for(var i = 0; i <=(_c - 1); i++) suma = parseFloat(parseFloat(suma) + parseFloat(info.Ingresos[i].Monto));
+	return suma;
+}
+var Gastos = () => {
+	var info = MyInfo();
+	var _c = info.Gastos.length;
+	var suma = 0;
+	for(var i = 0; i <=(_c - 1); i++) suma = parseFloat(parseFloat(suma) + parseFloat(info.Gastos[i].Monto));
+	return suma;
+}
 //Funciones fuera del alcance de fquery
 //No incluir contenido fquery en este archivo

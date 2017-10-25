@@ -4,7 +4,7 @@ var selected = null;
 gastos = info.Gastos;
 
 if(gastos.length >= 1){
-
+	for(var j = 0; j <=(gastos.length - 1); j++) $("#gas").append("<li>#"+(j+1)+" <b>"+gastos[j].Motivo+"</b> - "+gastos[j].Tipo+" - $<span>"+gastos[j].Monto+"</span></li>");
 }else $("#gas").html("<small>No tienes gastos por el momento</small>")
 
 $("#ingre").on('click', function(){

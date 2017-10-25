@@ -60,7 +60,10 @@ $("#selcon").on('change', function(){
 								$("#other-sel").html(' ')
 							}else alert('Tiene que seleccionar una tarjeta');
 						})
-					}else $("#at").html("<small><small>No tienes tarjetas</small></small>");
+					}else{
+						$("#at").html("<small><small>No tienes tarjetas</small></small>");
+						$("#other-sel").html(' ');
+					}
 					break;
 				}
 				case 'Cuenta':{
@@ -79,7 +82,10 @@ $("#selcon").on('change', function(){
 								$("#other-sel").html(' ')
 							}else alert('Tiene que seleccionar un cuenta');
 						})
-					} else $("#at").html("<small><small>No tienes cuentas</small></small>");
+					} else{
+						$("#at").html("<small><small>No tienes cuentas</small></small>");
+						$("#other-sel").html(' ');
+					}
 					break;
 				}
 				default:{break}
