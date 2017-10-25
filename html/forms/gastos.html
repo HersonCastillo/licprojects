@@ -55,12 +55,11 @@
 			<label>Monto gastado: </label><br>
 			<input type='number' id='monto' step="0.05" value="0.00" min="0.00"><br> 
 
-			<label>Cuenta en que se almacena el nuevo ingreso: </label><br><br>
-			<form action="" id="form">
-				<input type="radio" id="chk1" value="efe" name="chk"><label for="chk1">Efectivo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="radio" id="chk2" value="aho" name="chk"><label for="chk2">Cuenta de ahorro</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="radio" id="chk3" value="tar" name="chk"><label for="chk3">Tareta de credito</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			</form><br>
+			<label>Cuenta en que se almacena el gasto: </label><br><br>
+			<input type="checkbox" id="efectivo-val"> Efectivo<br>
+			<br>
+			<input type="text" id="cuenta-val" placeholder="Cuenta"><br>
+			<input type="number" id="tarjeta-val" placeholder="Tarjeta">
 			
 			<div id="aho1">
 				<label for="">Cuenta de ahorro en el que se almacenara el gasto</label>
@@ -71,7 +70,7 @@
 				<input type="text">
 			</div>
 
-			<input type="button" name="button" value="AGREGAR NUEVO INGRESO" class="bot" id="ingre"><br><br>
+			<input type="button" name="button" value="AGREGAR GASTO" class="bot" id="ingre"><br><br>
 		</div>
 	
 		<div class="conta">
@@ -122,8 +121,8 @@
 	</div>	
 	<script type="text/javascript" src="../../js/close.js"></script>
 	<script type="text/javascript" src="../../js/derecha.js"></script>
-
-
+	<script type="text/javascript" src="../../js/Fn.js"></script>
+	<script type="text/javascript" src="../../js/per-form/gastos.js"></script>
 </body>
 <footer>
 	<div class="footer01">
